@@ -1,14 +1,18 @@
-# Nerfies
+# MV-MATH
 
-This is the repository that contains source code for the [Nerfies website](https://nerfies.github.io).
+This is the repository that contains source code for the [MV-MATH website](https://eternal8080.github.io/MV-MATH.github.io/).
+=======
 
-If you find Nerfies useful for your work please cite:
+If you find MV-MATH useful for your work please cite:
 ```
-@article{park2021nerfies
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+@misc{wang2025mvmathevaluatingmultimodalmath,
+      title={MV-MATH: Evaluating Multimodal Math Reasoning in Multi-Visual Contexts}, 
+      author={Peijie Wang and Zhongzhi Li and Fei Yin and Dekang Ran and Chenglin Liu},
+      year={2025},
+      eprint={2502.20808},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2502.20808}, 
 }
 ```
 

@@ -3,42 +3,53 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+        content="MV-MATH: Evaluating Multimodal Math Reasoning in Multi-Visual Contexts">
+  <meta name="keywords" content="MLLMs, MV-MATH">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>MV-MATH: Evaluating Multimodal Math Reasoning in Multi-Visual Contexts</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
-  <script>
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script> -->
+  <!-- <script>
     window.dataLayer = window.dataLayer || [];
 
     function gtag() {
       dataLayer.push(arguments);
     }
-
+/Users/panlu/Library/Mobile Documents/com~apple~CloudDocs/ImageMath/visual-mathqa-server/data_final/images
     gtag('js', new Date());
 
     gtag('config', 'G-PYVRSFMDRL');
-  </script>
+  </script> -->
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+  <link rel="icon" href="./static/images/ucas_logo_circle.png">
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="stylesheet" href="./static/css/leaderboard.css">
+
+  <!-- <link href="https://unpkg.com/tabulator-tables@5.5.2/dist/css/tabulator_bulma.min.css" rel="stylesheet">
+  <script type="text/javascript" src="https://unpkg.com/tabulator-tables@5.5.2/dist/js/tabulator.min.js"></script> -->
+  <script type="text/javascript" src="static/js/sort-table.js" defer></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
+  <script src="./static/js/explorer-index.js"></script>
+  <script src="./static/js/question_card.js"></script>
+
+  <script src="./static/js/leaderboard_testmini.js"></script>  
+  <script src="./data/results/output_folders.js" defer></script>
+  <script src="./data/results/model_scores.js" defer></script>
+
+  <script src="./visualizer/data/data_public.js" defer></script>
 </head>
 <body>
 
@@ -52,28 +63,31 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
+      <a class="navbar-item" href="https://arxiv.org/pdf/2402.10104v2">
       <span class="icon">
           <i class="fas fa-home"></i>
       </span>
-      </a>
-
+      </a> 
+      <!-- @PAN TODO: consider adding links? -->
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
           More Research
         </a>
         <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
+          <a class="navbar-item" href="https://mathvista.github.io/">
+            <b>MathVista🔥</b>
           </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
+          <a class="navbar-item" href="https://mathllm.github.io/mathvision/">
+            <b>Math-Vision🔥</b>
           </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
+          <a class="navbar-item" href="https://eternal8080.github.io/GeoEval.github.io/">
+            <b>GeoEval🔥</b>
           </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
+          <a class="navbar-item" href="https://arxiv.org/abs/2407.12023">
+            <b>CMMaTH🔥🔥</b>
+          </a>
+          <a class="navbar-item" href="https://arxiv.org/abs/2502.17419">
+            <b>Survey🔥🔥🔥</b>
           </a>
         </div>
       </div>
@@ -83,44 +97,42 @@
 </nav>
 
 
+
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
+          <h1 class="title is-1 publication-title">MV-MATH: Evaluating Multimodal Math Reasoning in Multi-Visual Contexts</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
+              <a href="https://scholar.google.com.hk/citations?user=jUitttEAAAAJ&hl=zh-CN">Peijie Wang</a><sup>1,2</sup>,</span>
             <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
+              <a href="https://zzli2022.github.io/">Zhongzhi Li</a><sup>1,2</sup>,</span>
             <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
+              <a href="">Dekang Ran</a><sup>1,2</sup>,
             </span>
             <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
+              <a href="https://nlpr.ia.ac.cn/pal/People/YinFei.html">Fei Yin</a><sup>1,2</sup>,
             </span>
             <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+              <a href="https://nlpr.ia.ac.cn/liucl/">Chenglin Liu</a><sup>1,2</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+            <span class="author-block"><sup>1</sup>MAIS, Institute of Automation of Chinese Academy of Sciences</span>
+            <span class="author-block"><sup>2</sup>School of Artificial Intelligence, University of Chinese Academy of Sciences</span>
+            <br>
+            <span class="paper-block"><b style="color:#f41c1c">CVPR 2025</b> </span>
+
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
+                <a href="https://arxiv.org/pdf/2502.20808"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -129,7 +141,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
+                <a href="https://arxiv.org/abs/2502.20808"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -139,33 +151,25 @@
               </span>
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href="https://github.com/eternal8080/MV-MATH"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
-                  </a>
+                  <span>code</span>
+                </a>
               </span>
-              <!-- Dataset Link. -->
+              <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                <a href="https://huggingface.co/datasets/PeijieWang/MV-MATH"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
                   </span>
-                  <span>Data</span>
+                  <span>dataset</span>
                   </a>
+              </span>
+              
             </div>
 
           </div>
@@ -175,315 +179,770 @@
   </div>
 </section>
 
-<section class="hero teaser">
+
+
+ <section class="hero teaser">
   <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
-      </h2>
+    <div class="content has-text-centered">
+      <img src="static/images/lidia.jpg" alt="geometric reasoning" width="100%"/>
+      <p> Performance comparison of six Multimodal Large Language Models(MLLMs) on our proposed MV-MATH dataset across 11
+        subjects(left) and 3 question types(right). SAR: Step Accuracy Rate, QCR: Question Completeness Rate.
+      </p>
     </div>
   </div>
-</section>
+</section> 
 
 
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 <section class="section">
-  <div class="container is-max-desktop">
+  <div class="container" style="margin-bottom: 2vh;">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3">Introduction</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            Multimodal Large Language Models (MLLMs) have shown promising capabilities in mathematical reasoning within visual contexts across various datasets. However, most existing multimodal math benchmarks are limited to single-visual contexts, which diverges from the multi-visual scenarios commonly encountered in real-world mathematical applications. To address this gap, we introduce <b>MV-MATH</b>: a meticulously curated dataset of 2,009 high-quality mathematical problems. Each problem integrates multiple images interleaved with text, derived from authentic K-12 scenarios, and enriched with detailed annotations. <b>MV-MATH</b> includes multiple-choice, free-form, and multi-step questions, covering 11 subject areas across 3 difficulty levels, and serves as a comprehensive and rigorous benchmark for assessing MLLMs’ mathematical reasoning in multi-visual contexts. Through extensive experimentation, we observe that MLLMs encounter substantial challenges in multi-visual math tasks, with a considerable performance gap relative to human capabilities on <b>MV-MATH</b>. Furthermore, we analyze the performance and error patterns of various models, providing insights into MLLMs' mathematical reasoning capabilities within multi-visual settings.          
           </p>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
-
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-    <!--/ Paper video. -->
-  </div>
+</div>
 </section>
-
 
 <section class="section">
-  <div class="container is-max-desktop">
-
+  <div class="container">
+    
     <div class="columns is-centered">
+      <div class="column is-full has-text-centered content">
 
-      <!-- Visual Effects. -->
-      <div class="column">
+      
+
+        <h2 class="title is-3" id="leaderboard_test">Leaderboard on MV-MATH</h2>
         <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
+          <p class="mt-3">Accuracy scores of models on our <b>MV-MATH</b> benchmark</p>
+
+          <table class="js-sort-table" id="results">
+            <tr>
+              <th class="js-sort-number">Model</th>
+              <th class="js-sort-number">Overall</th>
+              <th class="js-sort-number">AG</th>
+              <th class="js-sort-number">Algebra</th>
+              <th class="js-sort-number">MG</th>
+              <th class="js-sort-number">Combinatorics</th>
+              <th class="js-sort-number">TG</th>
+              <th class="js-sort-number">Logic</th>
+              <th class="js-sort-number">SG</th>
+              <th class="js-sort-number">Arithmetic</th>     
+              <th class="js-sort-number">CG</th>
+              <th class="js-sort-number">DG</th>
+              <th class="js-sort-number">Statistics</th>
+            </tr>
+            <tr>
+              <td><b class="best-score-text" style="color: #C6011F">Claude-3.5🥇</b></td>
+              <td><b class="best-score-text">33.9</b></td>
+              <td><b class="best-score-text">32.7</b></td>
+              <td><b class="best-score-text">38.1</b></td>
+              <td>34.3</td>
+              <td><b class="best-score-text">46.7</b></td>
+              <td><b class="best-score-text">33.3</b></td>
+              <td>29.8</td>
+              <td>36.3</td>
+              <td><b class="best-score-text">54.2</b></td>
+              <td><b class="best-score-text">27.0</b></td>
+              <td>38.2</td>
+              <td>41.1</td>
+            </tr>
+            <tr>
+              <td><b class="best-score-text" style="color: #C6011F">GPT-4o🥈</b></td>
+              <td>32.1</td>
+              <td>28.7</td>
+              <td>36.7</td>
+              <td><b class="best-score-text">34.4</b></td>
+              <td>39.4</td>
+              <td>30.6</td>
+              <td>29.8</td>
+              <td><b class="best-score-text">38.2</b></td>
+              <td>41.7</td>
+              <td>20.8</td>
+              <td><b class="best-score-text">44.3</b></td>
+              <td><b class="best-score-text">47.0</b></td>
+            </tr>
+            <tr>
+              <td><b class="best-score-text" style="color: #C6011F">Gemini-1.5-Pro🥉</b></td>
+              <td>29.1</td>
+              <td>29.9</td>
+              <td>32.9</td>
+              <td>28.3</td>
+              <td>28.0</td>
+              <td>30.5</td>
+              <td><b class="best-score-text">40.5</b></td>
+              <td>33.9</td>
+              <td>42.7</td>
+              <td>21.7</td>
+              <td>30.6</td>
+              <td>35.2</td>
+            </tr>
+            <tr>
+              <td><b class="best-score-text" style="color: #C6011F">Qwen-vl-max</b></td>
+              <td>26.9</td>
+              <td>27.6</td>
+              <td>32.1</td>
+              <td>24.7</td>
+              <td>36.5</td>
+              <td>29.6</td>
+              <td>31.8</td>
+              <td>30.9</td>
+              <td>37.5</td>
+              <td>23.7</td>
+              <td>32.3</td>
+              <td>23.5</td>
+            </tr>
+            <tr>
+              <td><b class="best-score-text" style="color: #C6011F">GPT-4V</b></td>
+              <td>24.5</td>
+              <td>18.7</td>
+              <td>31.6</td>
+              <td>32.4</td>
+              <td>25.6</td>
+              <td>26.3</td>
+              <td>36.3</td>
+              <td>26.8</td>
+              <td>43.7</td>
+              <td>19.3</td>
+              <td>33.8</td>
+              <td>35.2</td>
+            </tr>
+            <tr>
+              <td><b class="best-score-text" style="color: #C6011F">Qwen-vl-plus</b></td>
+              <td>19.7</td>
+              <td>17.9</td>
+              <td>24.1</td>
+              <td>22.0</td>
+              <td>16.0</td>
+              <td>19.9</td>
+              <td>24.8</td>
+              <td>15.9</td>
+              <td>15.2</td>
+              <td>18.7</td>
+              <td>31.4</td>
+              <td>29.4</td>
+            </tr>
+            <tr>
+              <td><b class="best-score-text" style="color: #0a83f4">QVQ-72B-Preview</b></td>
+              <td>29.3</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td><b class="best-score-text" style="color: #0a83f4">LLaVA-OneVision-Chat-72B</b></td>
+              <td>26.2</td>
+              <td>25.1</td>
+              <td>32.4</td>
+              <td>23.9</td>
+              <td>35.3</td>
+              <td>28.1</td>
+              <td>27.2</td>
+              <td>31.6</td>
+              <td>31.2</td>
+              <td>22.6</td>
+              <td>35.9</td>
+              <td>35.2</td>
+            </tr>
+            <tr>
+              <td><b class="best-score-text" style="color: #0a83f4">LLaVA-OneVision-SFT-72B</b></td>
+              <td>25.9</td>
+              <td>24.2</td>
+              <td>31.3</td>
+              <td>21.1</td>
+              <td>23.1</td>
+              <td>28.9</td>
+              <td>31.8</td>
+              <td>32.8</td>
+              <td>18.7</td>
+              <td>21.5</td>
+              <td>39.5</td>
+              <td>29.4</td>
+            </tr>
+            <tr>
+              <td><b class="best-score-text" style="color: #0a83f4">LLaVA-OneVision-SI-72B</b></td>
+              <td>25.0</td>
+              <td>24.7</td>
+              <td>24.3</td>
+              <td>27.6</td>
+              <td>27.0</td>
+              <td>25.3</td>
+              <td>37.9</td>
+              <td>24.4</td>
+              <td>37.1</td>
+              <td>20.4</td>
+              <td>31.2</td>
+              <td>23.5</td>
+            </tr>
+            <tr>
+              <td><b class="best-score-text" style="color: #0a83f4">LLaVA-OneVision-Chat-7B</b></td>
+              <td>19.1</td>
+              <td>19.6</td>
+              <td>20.4</td>
+              <td>21.4</td>
+              <td>14.6</td>
+              <td>18.8</td>
+              <td>4.5</td>
+              <td>20.4</td>
+              <td>43.7</td>
+              <td>16.7</td>
+              <td>28.9</td>
+              <td>29.4</td>
+            </tr>          
+            <tr>
+              <td><b class="best-score-text" style="color: #0a83f4">LLaVA-OneVision-SFT-7B</b></td>
+              <td>18.8</td>
+              <td>18.2</td>
+              <td>20.3</td>
+              <td>22.3</td>
+              <td>17.3</td>
+              <td>20.1</td>
+              <td>9.0</td>
+              <td>15.8</td>
+              <td>43.1</td>
+              <td>15.8</td>
+              <td>27.3</td>
+              <td>23.5</td>
+            </tr>    
+            <tr>
+              <td><b class="best-score-text" style="color: #0a83f4">LLaVA-OneVision-SI-7B</b></td>
+              <td>17.2</td>
+              <td>16.1</td>
+              <td>19.5</td>
+              <td>13.2</td>
+              <td>16.0</td>
+              <td>19.5</td>
+              <td>12.6</td>
+              <td>15.0</td>
+              <td>36.5</td>
+              <td>13.2</td>
+              <td>31.3</td>
+              <td>13.6</td>
+            </tr>      
+            <tr>
+              <td><b class="best-score-text" style="color: #0a83f4">Qwen2VL-Instruct-7B</b></td>
+              <td>16.5</td>
+              <td>14.2</td>
+              <td>18.6</td>
+              <td>14.8</td>
+              <td>17.0</td>
+              <td>21.9</td>
+              <td>22.7</td>
+              <td>17.2</td>
+              <td>31.2</td>
+              <td>16.1</td>
+              <td>25.1</td>
+              <td>23.5</td>
+            </tr>           
+            <tr>
+              <td><b class="best-score-text" style="color: #0a83f4">Mantis-siglip-8B</b></td>
+              <td>15.8</td>
+              <td>17.9</td>
+              <td>17.7</td>
+              <td>17.9</td>
+              <td>14.6</td>
+              <td>20.4</td>
+              <td>22.7</td>
+              <td>12.1</td>
+              <td>18.7</td>
+              <td>10.8</td>
+              <td>32.3</td>
+              <td>17.6</td>
+            </tr>        
+            <tr>
+              <td><b class="best-score-text" style="color: #0a83f4">LLaVA-NeXT-Interleave-7B</b></td>
+              <td>14.7</td>
+              <td>14.0</td>
+              <td>15.5</td>
+              <td>15.2</td>
+              <td>17.0</td>
+              <td>18.2</td>
+              <td>18.1</td>
+              <td>16.3</td>
+              <td>6.2</td>
+              <td>14.1</td>
+              <td>24.4</td>
+              <td>23.5</td>
+            </tr>        
+            <tr>
+              <td><b class="best-score-text" style="color: #0a83f4">Deepseek-VL-7B</b></td>
+              <td>14.5</td>
+              <td>14.8</td>
+              <td>20.2</td>
+              <td>10.8</td>
+              <td>17.0</td>
+              <td>19.8</td>
+              <td>9.0</td>
+              <td>15.1</td>
+              <td>18.7</td>
+              <td>10.9</td>
+              <td>26.6</td>
+              <td>29.4</td>
+            </tr>         
+            <tr>
+              <td><b class="best-score-text" style="color: #0a83f4">Llama-3.2-Vision-Instruct-11B</b></td>
+              <td>14.4</td>
+              <td>15.0</td>
+              <td>15.4</td>
+              <td>16.2</td>
+              <td>23.1</td>
+              <td>15.6</td>
+              <td>18.1</td>
+              <td>11.9</td>
+              <td>31.2</td>
+              <td>14.3</td>
+              <td>25.1</td>
+              <td>17.6</td>
+            </tr>     
+            <tr>
+              <td><b class="best-score-text" style="color: #0a83f4">InternVL-Chat-8B</b></td>
+              <td>14.4</td>
+              <td>14.1</td>
+              <td>20.4</td>
+              <td>17.5</td>
+              <td>19.5</td>
+              <td>19.6</td>
+              <td>27.2</td>
+              <td>13.0</td>
+              <td>31.2</td>
+              <td>9.9</td>
+              <td>20.1</td>
+              <td>23.5</td>
+            </tr>    
+            <tr>
+              <td><b class="best-score-text" style="color: #0a83f4">InternLM-XComposer2.5-VL-7B</b></td>
+              <td>13.1</td>
+              <td>12.2</td>
+              <td>12.6</td>
+              <td>13.2</td>
+              <td>24.3</td>
+              <td>20.6</td>
+              <td>36.3</td>
+              <td>9.4</td>
+              <td>18.7</td>
+              <td>11.1</td>
+              <td>23.7</td>
+              <td>17.6</td>
+            </tr> 
+            <tr>
+              <td><b class="best-score-text" style="color: #0a83f4">VILA-13B</b></td>
+              <td>12.0</td>
+              <td>11.5</td>
+              <td>11.0</td>
+              <td>11.0</td>
+              <td>12.1</td>
+              <td>14.4</td>
+              <td>18.1</td>
+              <td>13.2</td>
+              <td>37.5</td>
+              <td>10.6</td>
+              <td>20.8</td>
+              <td>5.8</td>
+            </tr> 
+            <tr>
+              <td><b class="best-score-text" style="color: #0a83f4">LLaVA-v1.5-7B</b></td>
+              <td>10.3</td>
+              <td>9.3</td>
+              <td>11.7</td>
+              <td>11.2</td>
+              <td>9.7</td>
+              <td>12.8</td>
+              <td>13.6</td>
+              <td>10.2</td>
+              <td>0.0</td>
+              <td>7.7</td>
+              <td>23.7</td>
+              <td>11.7</td>
+            </tr> 
+            <tr>
+              <td><b class="best-score-text" style="color: #0a83f4">LLaVA-v1.5-13B</b></td>
+              <td>5.0</td>
+              <td>4.8</td>
+              <td>6.8</td>
+              <td>4.1</td>
+              <td>4.8</td>
+              <td>8.7</td>
+              <td>9.0</td>
+              <td>3.5</td>
+              <td>12.5</td>
+              <td>5.1</td>
+              <td>5.0</td>
+              <td>11.7</td>
+            </tr> 
+            <tr>
+              <td><b class="best-score-text" style="color: #0a83f4">Math-LLaVA-13B</b></td>
+              <td>3.0</td>
+              <td>1.6</td>
+              <td>6.9</td>
+              <td>4.7</td>
+              <td>4.8</td>
+              <td>2.9</td>
+              <td>0.0</td>
+              <td>3.2</td>
+              <td>18.7</td>
+              <td>6.6</td>
+              <td>2.1</td>
+              <td>5.8</td>
+            </tr> 
+        </table>
+
+          <b>Models:</b> <b class="best-score-text" style="color: #C6011F">Closed-source</b> models are highlighted in red, while <b class="best-score-text" style="color: #0a83f4">open-source</b> models are highlighted in blue.
+          <br>
+          <b>Mathematical Subjects:</b> AG: Analytic Geometry, MG: Metric Geometry, TG: Transformation Geometry, SG: Solid Geometry, CG: Combinatorial Geometry, DG: Descriptive Geometry.
+          <br>
+          <div>
+          <p>🚨 For more details, please refer to <a href="https://arxiv.org/abs/2502.20808">this link</a> 
           </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
           </div>
-
         </div>
+
       </div>
     </div>
-    <!--/ Matting. -->
-
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
-        <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
-        </div>
-        <br/>
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
-
-      </div>
-    </div>
-    <!--/ Animation. -->
-
-
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Concurrent Work. -->
 
   </div>
 </section>
 
+<!-- DATASET SECTION -->
+<section class="hero is-light is-small">
+  <div class="hero-body has-text-centered">
+    <!-- <h1 class="title is-1 mathvista"><img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>MathVista Dataset</h1> -->
+  <h1 class="title is-1 mathvista">
+    <!--<img src="static/images/mathvista.png" style="width:1em;vertical-align: middle" alt="Logo"/>-->
+    <span class="mathvista" style="vertical-align: middle">MV-MATH Dataset</span>
+  </h1>
+  </div>
+</section>
 
+<!-- <section class="section">
+  <div class="container" style="margin-bottom: 2vh;">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Introduction</h2>
+        <div class="content has-text-justified">
+          <p> -->
+            
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <!-- <div class="column is-full-width has-text-centered"> -->
+        <div class="column is-four-fifths">
+        <h2 class="title is-3">Overview</h2>
+        <div class="content has-text-justified">
+          <p>
+            <b>MV-MATH</b> is a meticulously annotated dataset designed to evaluate the mathematical reasoning capabilities of MLLMs in <b>multi-visual</b> contexts. Each sample in MV-MATH consists of interleaved multi-image and text. It comprises 2,009 multi-image questions, with some questions containing up to 8 images. It includes three types: multiple-choice, free-form and multi-step questions.           
+            <br><br>
+            <b>MV-MATH</b> is organized into 11 subjects over 3 difficulty levels, including <em>Analytic Geometry, Algebra, Metric Geometry, Combinatorics, Transformation Geometry, Logic, Solid Geometry, Arithmetic, Combinatorial Geometry, Descriptive Geometry</em> and <em>Statistics</em>, covering a range of scenarios from the K-12 mathematics curriculum.
+            <br><br>
+            Based on image relevance, we categorize MV-MATH into two subsets: a <b>mutually dependent set (MD)</b>, where images are interrelated and understanding one image necessitates information from another; and an <b>independent set (ID)</b>, where images are unrelated and can be interpreted independently without reference to other images.
+            <br><br>
+          </p>
+
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <img src="static/images/MV-MATH_Samples.jpg" alt="distribution" width="100%"/>
+                <p> Sampled <b>MV-MATH</b> examples from each question type. Each sample contains a multi-visual contexts.</p>
+              </div>
+            </div>
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <img src="static/images/MV-MATH_Comparison.jpg" alt="comparison" width="100%"/>
+                <p>Comparison with existing multimodal math benchmarks. MC: Multiple Choice, FF: Free-form, MS:Multi-Step
+                  <br>
+                </p>
+              </div>
+            </div>
+          </div>
+          <br><br>
+          You can download the dataset on <a href="https://huggingface.co/datasets/PeijieWang/MV-MATH" target="_blank">Hugging Face Dataset</a>.
+          <br><br>
+          <div class="columns is-centered">
+            <div class="column" style="margin-right: -5rem;">
+              <div class="content has-text-centered">
+                <img src="static/images/MV-MATH_stastics.jpg" alt="data-overview" style="max-width: 70%;"/>
+                <p> 
+                  Key statistics of <B>MV-MATH</B>.
+                </p> 
+              </div>
+            </div>
+            <div class="column">
+              <div class="content has-text-centered">
+                <img src="static/images/MV-MATH_data-composition.jpg" alt="data-composition" style="max-width: 100%;"/>
+                <p>
+                    <b>Inner</b>: divided by question type (3 types).<br/>
+                    <b>Middle</b>: divided by difficulty level (3 levels).<br/>
+                    <b>Outer</b>: divided by subjects (11 subjects).
+                </p>
+              </div>
+            </div>
+          </div>
+          
+
+          <div class="columns is-centered">
+            <div class="column">
+              <div class="box m-5">
+                <div class="content has-text-centered">
+                  <img src="static/images/3images.jpg" alt="data-overview" style="max-width: 100%;"/>
+                  <p> 
+                   (a) <strong>comparison with existing mathematical benchmarks</strong>, (b) <strong>distribution of question length per question</strong>, (c) <strong>distribution of the images per question</strong>.
+                  </p> 
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="content has-text-centered">
+            <img src="static/images/source_dataset.png" alt="geometric reasoning" width="60%"/>
+            <p> Summary of the 31 different source datasets in <img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+              <span class="mathvista">MathVista</span>.
+            </p>
+          </div>
+          <div class="content has-text-centered">
+            <img src="static/images/our_new_3_datasets.png" alt="geometric reasoning" width="70%"/>
+            <p> Examples of our newly annotated datasets: IQTest, FunctionQA, and PaperQA.</p>
+          </div> -->
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+<!-- RESULTS SECTION -->
+<section class="hero is-light is-small">
+  <div class="hero-body has-text-centered">
+    <h1 class="title is-1 mathvista_other">Experiment Results</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths" style="width: 100%;">
+        <h2 class="title is-3">Main Results</h2>
+        <div class="content has-text-justified">
+          <div id="results-carousel" class="carousel results-carousel">  
+            
+              <div class="content has-text-centered">
+                <img src="static/images/MV-MATH_mainresult1.png" style="width: 85%;"/>
+                <p style="text-align: center; margin-left: auto; margin-right: auto; width: 75%;">
+                  Comparison of model performances across various mathematical subjects. AG: Analytic Geometry, MG: Metric Geometry, TG:
+                  Transformation Geometry, SG: Solid Geometry, CG: Combinatorial Geometry, DG: Descriptive Geometry. The first and second highest
+                  accuracy of LMMs are marked in <span style="color: #df0f20da;">red</span> and <span style="color: #099ee2;">blue</span>, respectively.
+                </p>
+              </div>
+            
+              <div class="content has-text-centered">
+                <img src="static/images/MV-MATH_mainresult2.png" style="width: 85%;"/>
+                <p style="text-align: center; margin-left: auto; margin-right: auto; width: 75%;">
+                  Comparison of model performances across various mathematical subjects on the <b>choice problem set</b>. The first and second highest
+                  accuracy of LMMs are marked in <span style="color: #df0f20da;">red</span> and <span style="color: #099ee2;">blue</span>, respectively.
+                </p>
+              </div>
+
+              <div class="content has-text-centered">
+                <img src="static/images/MV-MATH_mainresult3.png" style="width: 75%;"/>
+                <p style="text-align: center; margin-left: auto; margin-right: auto; width: 75%;">
+                  Comparison of model performances across various mathematical subjects on the <b>single-step problem set</b>. The first and second highest
+                  accuracy of LMMs are marked in <span style="color: #df0f20da;">red</span> and <span style="color: #099ee2;">blue</span>, respectively.
+                </p>
+              </div>
+
+              <div class="content has-text-centered">
+                <img src="static/images/MV-MATH_mainresult4.png" style="width: 75%;"/>
+                <p style="text-align: center; margin-left: auto; margin-right: auto; width: 75%;">
+                  Comparison of model performances across various mathematical subjects on the <b>multi-step problem set(SAR: Step Accuracy Rate)</b>. The first and second highest
+                  accuracy of LMMs are marked in <span style="color: #df0f20da;">red</span> and <span style="color: #099ee2;">blue</span>, respectively.
+                </p>
+              </div>
+
+              <div class="content has-text-centered">
+                <img src="static/images/MV-MATH_mainresult5.png" style="width: 75%;"/>
+                <p style="text-align: center; margin-left: auto; margin-right: auto; width: 75%;">
+                  Comparison of model performances across various mathematical subjects on the <b>multi-step problem set(QCR: Question Completeness Rate)</b>. The first and second highest
+                  accuracy of LMMs are marked in <span style="color: #df0f20da;">red</span> and <span style="color: #099ee2;">blue</span>, respectively.
+                </p>
+              </div>
+    
+          </div>
+    
+          
+        </div>
+      </div> 
+    </div>
+
+
+
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3">More Results</h2>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/MV-MATH_moreresult.png" alt="grade-lv" width="100%"/>
+            </div>
+          </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  
+<!-- Data Examples -->
+<section class="hero is-light is-small">
+  <div class="hero-body has-text-centered">
+    <h1 class="title is-1 mathvista_other">Data Examples</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths" style="width: 100%;">
+        <h2 class="title is-3">Data Examples</h2>
+        <div class="content has-text-justified">
+          <div id="results-carousel" class="carousel results-carousel">  
+            
+              <div class="content has-text-centered">
+
+                <img src="static/images/MV-MATH_example1.png" style="width: 65%;"/>
+                <p style="margin-bottom: 30px;">Data Example of Multiple-choice questions.</p>
+
+                
+              </div>
+            
+              <div class="content has-text-centered">
+
+                <img src="static/images/MV-MATH_example2.png" style="width: 45%;"/>
+                <p style="margin-bottom: 30px;">Data Example of Multiple-choice questions.</p>
+              </div>
+
+              <div class="content has-text-centered">
+
+                <img src="static/images/MV-MATH_example3.png" style="width: 45%;"/>
+                <p style="margin-bottom: 30px;">Data Example of Multiple-choice questions.</p>
+              </div>
+
+              <div class="content has-text-centered">
+
+                <img src="static/images/MV-MATH_example4.png" style="width: 45%;"/>
+                <p style="margin-bottom: 30px;">Data Example of Free-form questions.</p>
+              </div>
+
+              <div class="content has-text-centered">
+
+                <img src="static/images/MV-MATH_example5.png" style="width: 45%;"/>
+                <p style="margin-bottom: 30px;">Data Example of Free-form questions.</p>
+              </div>
+
+              <div class="content has-text-centered">
+
+                <img src="static/images/MV-MATH_example6.png" style="width: 45%;"/>
+                <p style="margin-bottom: 30px;">Data Example of Multiple-choice questions.</p>
+              </div>
+
+              <div class="content has-text-centered">
+
+                <img src="static/images/MV-MATH_example7.png" style="width: 45%;"/>
+                <p style="margin-bottom: 30px;">Data Example of Multi-step questions.</p>
+              
+              </div>
+
+              <div class="content has-text-centered">
+
+                <img src="static/images/MV-MATH_example8.png" style="width: 45%;"/>
+                <p style="margin-bottom: 30px;">Data Example of Free-form questions.</p>
+              
+              </div>
+
+              <div class="content has-text-centered">
+
+                <img src="static/images/MV-MATH_example9.png" style="width: 45%;"/>
+                <p style="margin-bottom: 30px;">Data Example of Free-form questions.</p>
+              
+              </div>
+
+              <div class="content has-text-centered">
+
+                <img src="static/images/MV-MATH_example10.png" style="width: 45%;"/>
+                <p style="margin-bottom: 30px;">Data Example of Multiple-choice questions.</p>
+              
+              </div>
+
+          </div>
+
+          
+        </div>
+      </div> 
+    </div>
+  </div>
+</section>
+
+
+<!-- @PAN TODO: bibtex -->
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+    <h2 class="title is-3 has-text-centered">BibTeX</h2>
+    <pre><code>@misc{wang2025mvmathevaluatingmultimodalmath,
+      title={MV-MATH: Evaluating Multimodal Math Reasoning in Multi-Visual Contexts}, 
+      author={Peijie Wang and Zhongzhi Li and Fei Yin and Dekang Ran and Chenglin Liu},
+      year={2025},
+      eprint={2502.20808},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2502.20808}, 
 }</code></pre>
+  </div>
+</section>
+
+<section>
+  <div class="section" id="org-banners" style="display:flex">
+    <a href="https://ia.cas.cn/" target="_blank" rel="external">
+        <img class="center-block org-banner" src="static/images/CASIA logo.png" style="width: 400px; height: 200px;">
+    </a>
+    <a href="https://www.ucas.edu.cn/" target="blank" class="ext-link">
+        <img class="center-block org-banner" src="static/images/ucas_logo.png" style="width: 400px; height: 200px;">
+    </a>
   </div>
 </section>
 
 
 <footer class="footer">
-  <div class="container">
+  <!-- <div class="container"> -->
     <div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
     </div>
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
           <p>
-            This website is licensed under a <a rel="license"
+            This website is website adapted from <a href="https://nerfies.github.io/">Nerfies</a>, licensed under a <a rel="license"
                                                 href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
           </p>
         </div>
       </div>
     </div>
-  </div>
+  <!-- </div> -->
 </footer>
 
 </body>
