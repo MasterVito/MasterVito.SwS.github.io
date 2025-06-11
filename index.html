@@ -53,7 +53,7 @@
 </head>
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
       <span aria-hidden="true"></span>
@@ -68,8 +68,8 @@
           <i class="fas fa-home"></i>
       </span>
       </a> 
-      <!-- @PAN TODO: consider adding links? -->
-      <div class="navbar-item has-dropdown is-hoverable">
+      @PAN TODO: consider adding links? -->
+      <!-- <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
           More Research
         </a>
@@ -94,7 +94,7 @@
     </div>
 
   </div>
-</nav>
+</nav> -->
 
 
 
@@ -103,28 +103,51 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title" style="width:100%; max-width:100%; white-space:normal;"> SwS: Self-aware Weakness-driven Problem Synthesis in Reinforcement Learning for LLM Reasoning</h1>
+          <h1 class="title is-1 publication-title"
+          style="
+            width: 120%;
+            max-width: 120%;
+            white-space: normal;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+          ">
+          SwS: Self-aware Weakness-driven Problem Synthesis in Reinforcement Learning for LLM Reasoning
+          </h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://scholar.google.com.hk/citations?user=jUitttEAAAAJ&hl=zh-CN">Peijie Wang</a><sup>1,2</sup>,</span>
+              <a href="https://mastervito.github.io/">Xiao Liang</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://zzli2022.github.io/">Zhongzhi Li</a><sup>1,2</sup>,</span>
+              <a href="https://zzli2022.github.io/">Zhong-Zhi Li</a><sup>2</sup>,</span>
             <span class="author-block">
-              <a href="">Dekang Ran</a><sup>1,2</sup>,
+              <a href="https://www.microsoft.com/en-us/research/people/yegong/">Yeyun Gong</a><sup>3</sup>,
             </span>
             <span class="author-block">
-              <a href="https://nlpr.ia.ac.cn/pal/People/YinFei.html">Fei Yin</a><sup>1,2</sup>,
+              <a href="https://www.microsoft.com/en-us/research/people/yangwang5/">Yang Wang</a><sup>3</sup>,
             </span>
             <span class="author-block">
-              <a href="https://nlpr.ia.ac.cn/liucl/">Chenglin Liu</a><sup>1,2</sup>
+              <a href="https://rattlesnakey.github.io/">Hengyuan Zhang</a><sup>4</sup>
+            </span>
+            <br>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/yelong-shen-84b0122b/">Yelong Shen</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="http://www.stat.ucla.edu/~ywu/research.html">Ying Nian Wu</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.microsoft.com/en-us/research/people/wzchen/">Weizhu Chen</a><sup>3</sup>,
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>MAIS, Institute of Automation of Chinese Academy of Sciences</span>
-            <span class="author-block"><sup>2</sup>School of Artificial Intelligence, University of Chinese Academy of Sciences</span>
-            <br>
-            <span class="paper-block"><b style="color:#f41c1c">CVPR 2025</b> </span>
+            <span class="author-block"><sup>1</sup>University of California, Los Angeles</span> <br>
+            <span class="author-block"><sup>2</sup>School of Artificial Intelligence, Chinese Academy of Sciences</span> <br>
+            <span class="author-block"><sup>3</sup>Microsoft</span>
+            <span class="author-block"><sup>4</sup>Tsinghua University</span>
+            <!-- <br>
+            <span class="paper-block"><b style="color:#f41c1c">CVPR 2025</b> </span> -->
 
           </div>
 
@@ -132,7 +155,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2502.20808"
+                <a href="https://arxiv.org/pdf/2506.08989"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -141,7 +164,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2502.20808"
+                <a href="https://arxiv.org/abs/2506.08989"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -151,7 +174,7 @@
               </span>
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://github.com/eternal8080/MV-MATH"
+                <a href="https://github.com/MasterVito/SwS"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -184,9 +207,8 @@
  <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="content has-text-centered">
-      <img src="static/images/lidia.jpg" alt="geometric reasoning" width="100%"/>
-      <p> Performance comparison of six Multimodal Large Language Models(MLLMs) on our proposed MV-MATH dataset across 11
-        subjects(left) and 3 question types(right). SAR: Step Accuracy Rate, QCR: Question Completeness Rate.
+      <img src="static/images/teaser.png" alt="geometric reasoning" width="100%" style="margin-bottom: 24px;"/>
+      <p> Figure1: 32B model performance across mainstream reasoning benchmarks (GSM8k, MATH, Minerva-Math, Olympiad-Bench, Gaokao-2023, AMC23, AIME 24 & 25) and different mathematical domains.
       </p>
     </div>
   </div>
@@ -199,11 +221,11 @@
   <div class="container" style="margin-bottom: 2vh;">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column" style="flex: 0 0 85%;">
         <h2 class="title is-3">Introduction</h2>
         <div class="content has-text-justified">
           <p>
-            Multimodal Large Language Models (MLLMs) have shown promising capabilities in mathematical reasoning within visual contexts across various datasets. However, most existing multimodal math benchmarks are limited to single-visual contexts, which diverges from the multi-visual scenarios commonly encountered in real-world mathematical applications. To address this gap, we introduce <b>MV-MATH</b>: a meticulously curated dataset of 2,009 high-quality mathematical problems. Each problem integrates multiple images interleaved with text, derived from authentic K-12 scenarios, and enriched with detailed annotations. <b>MV-MATH</b> includes multiple-choice, free-form, and multi-step questions, covering 11 subject areas across 3 difficulty levels, and serves as a comprehensive and rigorous benchmark for assessing MLLMs’ mathematical reasoning in multi-visual contexts. Through extensive experimentation, we observe that MLLMs encounter substantial challenges in multi-visual math tasks, with a considerable performance gap relative to human capabilities on <b>MV-MATH</b>. Furthermore, we analyze the performance and error patterns of various models, providing insights into MLLMs' mathematical reasoning capabilities within multi-visual settings.          
+            Reinforcement Learning with Verifiable Rewards (RLVR) has proven effective for training large language models (LLMs) on complex reasoning tasks, such as mathematical problem solving. A prerequisite for the scalability of RLVR is a high-quality problem set with precise and verifiable answers. However, the scarcity of well-crafted human-labeled math problems and limited-verification answers in existing distillation-oriented synthetic datasets limit their effectiveness in RL. Additionally, most problem synthesis strategies indiscriminately expand the problem set without considering the model's capabilities, leading to low efficiency in generating useful questions. To mitigate this issue, we introduce a Self-aware Weakness-driven problem Synthesis framework (SwS) that systematically identifies model deficiencies and leverages them for problem augmentation. Specifically, we define weaknesses as questions that the model consistently fails to learn through its iterative sampling during RL training. We then extract the core concepts from these failure cases and synthesize new problems to strengthen the model's weak areas in subsequent augmented training, enabling it to focus on and gradually overcome its weaknesses. Without relying on external knowledge distillation, our framework enables robust generalization byempowering the model to self-identify and address its weaknesses in RL, yielding average performance gains of 10.0% and 7.7% on 7B and 32B models across eight mainstream reasoning benchmarks.          
           </p>
         </div>
       </div>
@@ -212,411 +234,7 @@
 </div>
 </section>
 
-<section class="section">
-  <div class="container">
-    
-    <div class="columns is-centered">
-      <div class="column is-full has-text-centered content">
 
-      
-
-        <h2 class="title is-3" id="leaderboard_test">Leaderboard on MV-MATH</h2>
-        <div class="content">
-          <p class="mt-3">Accuracy scores of models on our <b>MV-MATH</b> benchmark</p>
-
-          <table class="js-sort-table" id="results">
-            <tr>
-              <th class="js-sort-number">Model</th>
-              <th class="js-sort-number">Overall</th>
-              <th class="js-sort-number">AG</th>
-              <th class="js-sort-number">Algebra</th>
-              <th class="js-sort-number">MG</th>
-              <th class="js-sort-number">Combinatorics</th>
-              <th class="js-sort-number">TG</th>
-              <th class="js-sort-number">Logic</th>
-              <th class="js-sort-number">SG</th>
-              <th class="js-sort-number">Arithmetic</th>     
-              <th class="js-sort-number">CG</th>
-              <th class="js-sort-number">DG</th>
-              <th class="js-sort-number">Statistics</th>
-            </tr>
-            <tr>
-              <td><b class="best-score-text" style="color: #C6011F">Claude-3.5🥇</b></td>
-              <td><b class="best-score-text">33.9</b></td>
-              <td><b class="best-score-text">32.7</b></td>
-              <td><b class="best-score-text">38.1</b></td>
-              <td>34.3</td>
-              <td><b class="best-score-text">46.7</b></td>
-              <td><b class="best-score-text">33.3</b></td>
-              <td>29.8</td>
-              <td>36.3</td>
-              <td><b class="best-score-text">54.2</b></td>
-              <td><b class="best-score-text">27.0</b></td>
-              <td>38.2</td>
-              <td>41.1</td>
-            </tr>
-            <tr>
-              <td><b class="best-score-text" style="color: #C6011F">GPT-4o🥈</b></td>
-              <td>32.1</td>
-              <td>28.7</td>
-              <td>36.7</td>
-              <td><b class="best-score-text">34.4</b></td>
-              <td>39.4</td>
-              <td>30.6</td>
-              <td>29.8</td>
-              <td><b class="best-score-text">38.2</b></td>
-              <td>41.7</td>
-              <td>20.8</td>
-              <td><b class="best-score-text">44.3</b></td>
-              <td><b class="best-score-text">47.0</b></td>
-            </tr>
-            <tr>
-              <td><b class="best-score-text" style="color: #C6011F">Gemini-1.5-Pro🥉</b></td>
-              <td>29.1</td>
-              <td>29.9</td>
-              <td>32.9</td>
-              <td>28.3</td>
-              <td>28.0</td>
-              <td>30.5</td>
-              <td><b class="best-score-text">40.5</b></td>
-              <td>33.9</td>
-              <td>42.7</td>
-              <td>21.7</td>
-              <td>30.6</td>
-              <td>35.2</td>
-            </tr>
-            <tr>
-              <td><b class="best-score-text" style="color: #C6011F">Qwen-vl-max</b></td>
-              <td>26.9</td>
-              <td>27.6</td>
-              <td>32.1</td>
-              <td>24.7</td>
-              <td>36.5</td>
-              <td>29.6</td>
-              <td>31.8</td>
-              <td>30.9</td>
-              <td>37.5</td>
-              <td>23.7</td>
-              <td>32.3</td>
-              <td>23.5</td>
-            </tr>
-            <tr>
-              <td><b class="best-score-text" style="color: #C6011F">GPT-4V</b></td>
-              <td>24.5</td>
-              <td>18.7</td>
-              <td>31.6</td>
-              <td>32.4</td>
-              <td>25.6</td>
-              <td>26.3</td>
-              <td>36.3</td>
-              <td>26.8</td>
-              <td>43.7</td>
-              <td>19.3</td>
-              <td>33.8</td>
-              <td>35.2</td>
-            </tr>
-            <tr>
-              <td><b class="best-score-text" style="color: #C6011F">Qwen-vl-plus</b></td>
-              <td>19.7</td>
-              <td>17.9</td>
-              <td>24.1</td>
-              <td>22.0</td>
-              <td>16.0</td>
-              <td>19.9</td>
-              <td>24.8</td>
-              <td>15.9</td>
-              <td>15.2</td>
-              <td>18.7</td>
-              <td>31.4</td>
-              <td>29.4</td>
-            </tr>
-            <tr>
-              <td><b class="best-score-text" style="color: #0a83f4">QVQ-72B-Preview</b></td>
-              <td>29.3</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td><b class="best-score-text" style="color: #0a83f4">LLaVA-OneVision-Chat-72B</b></td>
-              <td>26.2</td>
-              <td>25.1</td>
-              <td>32.4</td>
-              <td>23.9</td>
-              <td>35.3</td>
-              <td>28.1</td>
-              <td>27.2</td>
-              <td>31.6</td>
-              <td>31.2</td>
-              <td>22.6</td>
-              <td>35.9</td>
-              <td>35.2</td>
-            </tr>
-            <tr>
-              <td><b class="best-score-text" style="color: #0a83f4">LLaVA-OneVision-SFT-72B</b></td>
-              <td>25.9</td>
-              <td>24.2</td>
-              <td>31.3</td>
-              <td>21.1</td>
-              <td>23.1</td>
-              <td>28.9</td>
-              <td>31.8</td>
-              <td>32.8</td>
-              <td>18.7</td>
-              <td>21.5</td>
-              <td>39.5</td>
-              <td>29.4</td>
-            </tr>
-            <tr>
-              <td><b class="best-score-text" style="color: #0a83f4">LLaVA-OneVision-SI-72B</b></td>
-              <td>25.0</td>
-              <td>24.7</td>
-              <td>24.3</td>
-              <td>27.6</td>
-              <td>27.0</td>
-              <td>25.3</td>
-              <td>37.9</td>
-              <td>24.4</td>
-              <td>37.1</td>
-              <td>20.4</td>
-              <td>31.2</td>
-              <td>23.5</td>
-            </tr>
-            <tr>
-              <td><b class="best-score-text" style="color: #0a83f4">LLaVA-OneVision-Chat-7B</b></td>
-              <td>19.1</td>
-              <td>19.6</td>
-              <td>20.4</td>
-              <td>21.4</td>
-              <td>14.6</td>
-              <td>18.8</td>
-              <td>4.5</td>
-              <td>20.4</td>
-              <td>43.7</td>
-              <td>16.7</td>
-              <td>28.9</td>
-              <td>29.4</td>
-            </tr>          
-            <tr>
-              <td><b class="best-score-text" style="color: #0a83f4">LLaVA-OneVision-SFT-7B</b></td>
-              <td>18.8</td>
-              <td>18.2</td>
-              <td>20.3</td>
-              <td>22.3</td>
-              <td>17.3</td>
-              <td>20.1</td>
-              <td>9.0</td>
-              <td>15.8</td>
-              <td>43.1</td>
-              <td>15.8</td>
-              <td>27.3</td>
-              <td>23.5</td>
-            </tr>    
-            <tr>
-              <td><b class="best-score-text" style="color: #0a83f4">LLaVA-OneVision-SI-7B</b></td>
-              <td>17.2</td>
-              <td>16.1</td>
-              <td>19.5</td>
-              <td>13.2</td>
-              <td>16.0</td>
-              <td>19.5</td>
-              <td>12.6</td>
-              <td>15.0</td>
-              <td>36.5</td>
-              <td>13.2</td>
-              <td>31.3</td>
-              <td>13.6</td>
-            </tr>      
-            <tr>
-              <td><b class="best-score-text" style="color: #0a83f4">Qwen2VL-Instruct-7B</b></td>
-              <td>16.5</td>
-              <td>14.2</td>
-              <td>18.6</td>
-              <td>14.8</td>
-              <td>17.0</td>
-              <td>21.9</td>
-              <td>22.7</td>
-              <td>17.2</td>
-              <td>31.2</td>
-              <td>16.1</td>
-              <td>25.1</td>
-              <td>23.5</td>
-            </tr>           
-            <tr>
-              <td><b class="best-score-text" style="color: #0a83f4">Mantis-siglip-8B</b></td>
-              <td>15.8</td>
-              <td>17.9</td>
-              <td>17.7</td>
-              <td>17.9</td>
-              <td>14.6</td>
-              <td>20.4</td>
-              <td>22.7</td>
-              <td>12.1</td>
-              <td>18.7</td>
-              <td>10.8</td>
-              <td>32.3</td>
-              <td>17.6</td>
-            </tr>        
-            <tr>
-              <td><b class="best-score-text" style="color: #0a83f4">LLaVA-NeXT-Interleave-7B</b></td>
-              <td>14.7</td>
-              <td>14.0</td>
-              <td>15.5</td>
-              <td>15.2</td>
-              <td>17.0</td>
-              <td>18.2</td>
-              <td>18.1</td>
-              <td>16.3</td>
-              <td>6.2</td>
-              <td>14.1</td>
-              <td>24.4</td>
-              <td>23.5</td>
-            </tr>        
-            <tr>
-              <td><b class="best-score-text" style="color: #0a83f4">Deepseek-VL-7B</b></td>
-              <td>14.5</td>
-              <td>14.8</td>
-              <td>20.2</td>
-              <td>10.8</td>
-              <td>17.0</td>
-              <td>19.8</td>
-              <td>9.0</td>
-              <td>15.1</td>
-              <td>18.7</td>
-              <td>10.9</td>
-              <td>26.6</td>
-              <td>29.4</td>
-            </tr>         
-            <tr>
-              <td><b class="best-score-text" style="color: #0a83f4">Llama-3.2-Vision-Instruct-11B</b></td>
-              <td>14.4</td>
-              <td>15.0</td>
-              <td>15.4</td>
-              <td>16.2</td>
-              <td>23.1</td>
-              <td>15.6</td>
-              <td>18.1</td>
-              <td>11.9</td>
-              <td>31.2</td>
-              <td>14.3</td>
-              <td>25.1</td>
-              <td>17.6</td>
-            </tr>     
-            <tr>
-              <td><b class="best-score-text" style="color: #0a83f4">InternVL-Chat-8B</b></td>
-              <td>14.4</td>
-              <td>14.1</td>
-              <td>20.4</td>
-              <td>17.5</td>
-              <td>19.5</td>
-              <td>19.6</td>
-              <td>27.2</td>
-              <td>13.0</td>
-              <td>31.2</td>
-              <td>9.9</td>
-              <td>20.1</td>
-              <td>23.5</td>
-            </tr>    
-            <tr>
-              <td><b class="best-score-text" style="color: #0a83f4">InternLM-XComposer2.5-VL-7B</b></td>
-              <td>13.1</td>
-              <td>12.2</td>
-              <td>12.6</td>
-              <td>13.2</td>
-              <td>24.3</td>
-              <td>20.6</td>
-              <td>36.3</td>
-              <td>9.4</td>
-              <td>18.7</td>
-              <td>11.1</td>
-              <td>23.7</td>
-              <td>17.6</td>
-            </tr> 
-            <tr>
-              <td><b class="best-score-text" style="color: #0a83f4">VILA-13B</b></td>
-              <td>12.0</td>
-              <td>11.5</td>
-              <td>11.0</td>
-              <td>11.0</td>
-              <td>12.1</td>
-              <td>14.4</td>
-              <td>18.1</td>
-              <td>13.2</td>
-              <td>37.5</td>
-              <td>10.6</td>
-              <td>20.8</td>
-              <td>5.8</td>
-            </tr> 
-            <tr>
-              <td><b class="best-score-text" style="color: #0a83f4">LLaVA-v1.5-7B</b></td>
-              <td>10.3</td>
-              <td>9.3</td>
-              <td>11.7</td>
-              <td>11.2</td>
-              <td>9.7</td>
-              <td>12.8</td>
-              <td>13.6</td>
-              <td>10.2</td>
-              <td>0.0</td>
-              <td>7.7</td>
-              <td>23.7</td>
-              <td>11.7</td>
-            </tr> 
-            <tr>
-              <td><b class="best-score-text" style="color: #0a83f4">LLaVA-v1.5-13B</b></td>
-              <td>5.0</td>
-              <td>4.8</td>
-              <td>6.8</td>
-              <td>4.1</td>
-              <td>4.8</td>
-              <td>8.7</td>
-              <td>9.0</td>
-              <td>3.5</td>
-              <td>12.5</td>
-              <td>5.1</td>
-              <td>5.0</td>
-              <td>11.7</td>
-            </tr> 
-            <tr>
-              <td><b class="best-score-text" style="color: #0a83f4">Math-LLaVA-13B</b></td>
-              <td>3.0</td>
-              <td>1.6</td>
-              <td>6.9</td>
-              <td>4.7</td>
-              <td>4.8</td>
-              <td>2.9</td>
-              <td>0.0</td>
-              <td>3.2</td>
-              <td>18.7</td>
-              <td>6.6</td>
-              <td>2.1</td>
-              <td>5.8</td>
-            </tr> 
-        </table>
-
-          <b>Models:</b> <b class="best-score-text" style="color: #C6011F">Closed-source</b> models are highlighted in red, while <b class="best-score-text" style="color: #0a83f4">open-source</b> models are highlighted in blue.
-          <br>
-          <b>Mathematical Subjects:</b> AG: Analytic Geometry, MG: Metric Geometry, TG: Transformation Geometry, SG: Solid Geometry, CG: Combinatorial Geometry, DG: Descriptive Geometry.
-          <br>
-          <div>
-          <p>🚨 For more details, please refer to <a href="https://arxiv.org/abs/2502.20808">this link</a> 
-          </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
-</section>
 
 <!-- DATASET SECTION -->
 <section class="hero is-light is-small">
@@ -624,7 +242,7 @@
     <!-- <h1 class="title is-1 mathvista"><img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>MathVista Dataset</h1> -->
   <h1 class="title is-1 mathvista">
     <!--<img src="static/images/mathvista.png" style="width:1em;vertical-align: middle" alt="Logo"/>-->
-    <span class="mathvista" style="vertical-align: middle">MV-MATH Dataset</span>
+    <span class="mathvista" style="vertical-align: middle">Methodology</span>
   </h1>
   </div>
 </section>
@@ -903,19 +521,19 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title is-3 has-text-centered">BibTeX</h2>
-    <pre><code>@misc{wang2025mvmathevaluatingmultimodalmath,
-      title={MV-MATH: Evaluating Multimodal Math Reasoning in Multi-Visual Contexts}, 
-      author={Peijie Wang and Zhongzhi Li and Fei Yin and Dekang Ran and Chenglin Liu},
+    <pre><code>@misc{liang2025swsselfawareweaknessdrivenproblem,
+      title={SwS: Self-aware Weakness-driven Problem Synthesis in Reinforcement Learning for LLM Reasoning}, 
+      author={Xiao Liang and Zhong-Zhi Li and Yeyun Gong and Yang Wang and Hengyuan Zhang and Yelong Shen and Ying Nian Wu and Weizhu Chen},
       year={2025},
-      eprint={2502.20808},
+      eprint={2506.08989},
       archivePrefix={arXiv},
-      primaryClass={cs.AI},
-      url={https://arxiv.org/abs/2502.20808}, 
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2506.08989}, 
 }</code></pre>
   </div>
 </section>
 
-<section>
+<!-- <section>
   <div class="section" id="org-banners" style="display:flex">
     <a href="https://ia.cas.cn/" target="_blank" rel="external">
         <img class="center-block org-banner" src="static/images/CASIA logo.png" style="width: 400px; height: 200px;">
@@ -924,26 +542,9 @@
         <img class="center-block org-banner" src="static/images/ucas_logo.png" style="width: 400px; height: 200px;">
     </a>
   </div>
-</section>
+</section> -->
 
 
-<footer class="footer">
-  <!-- <div class="container"> -->
-    <div class="content has-text-centered">
-    </div>
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This website is website adapted from <a href="https://nerfies.github.io/">Nerfies</a>, licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-        </div>
-      </div>
-    </div>
-  <!-- </div> -->
-</footer>
 
 </body>
 </html>
