@@ -260,82 +260,36 @@
     <div class="columns is-centered has-text-centered">
       <!-- <div class="column is-full-width has-text-centered"> -->
         <div class="column is-four-fifths">
-        <h2 class="title is-3">Overview</h2>
+        <!-- <h2 class="title is-3">Overview</h2> -->
         <div class="content has-text-justified">
           <p>
-            <b>MV-MATH</b> is a meticulously annotated dataset designed to evaluate the mathematical reasoning capabilities of MLLMs in <b>multi-visual</b> contexts. Each sample in MV-MATH consists of interleaved multi-image and text. It comprises 2,009 multi-image questions, with some questions containing up to 8 images. It includes three types: multiple-choice, free-form and multi-step questions.           
-            <br><br>
-            <b>MV-MATH</b> is organized into 11 subjects over 3 difficulty levels, including <em>Analytic Geometry, Algebra, Metric Geometry, Combinatorics, Transformation Geometry, Logic, Solid Geometry, Arithmetic, Combinatorial Geometry, Descriptive Geometry</em> and <em>Statistics</em>, covering a range of scenarios from the K-12 mathematics curriculum.
-            <br><br>
-            Based on image relevance, we categorize MV-MATH into two subsets: a <b>mutually dependent set (MD)</b>, where images are interrelated and understanding one image necessitates information from another; and an <b>independent set (ID)</b>, where images are unrelated and can be interpreted independently without reference to other images.
-            <br><br>
+            <b>SwS</b> is a targeted problem synthesis framework designed to strengthen a model's weakest reasoning capabilities via RL training. The framework begins with preliminary RL training on an initial problem set, identifying problems where the model fails to learn efficiently as weaknesses in reasoning. SwS then groups these recorded questions by category, extracts their underlying concepts, and recombines these concepts to synthesize new problems with appropriate difficulty levels. Finally, the model is further trained on the augmented problem set including the weakness-driven synthetic questions, aiming at addressing its weaknesses without relying on external knowledge distillation.
+            <!-- Below is the detailed strategy of how we define the problems with low learning efficiency as weaknesses. Specifically, a problem is classified as a weakness if it meets two criteria: (1) the model never achieves a response accuracy of 50% at any training epoch, and (2) the accuracy trend declines over time, as indicated by a negative slope.
+            <br><br> -->
           </p>
+        </div>
 
-          <div id="results-carousel" class="carousel results-carousel">
-            <div class="box m-5">
-              <div class="content has-text-centered">
-                <img src="static/images/MV-MATH_Samples.jpg" alt="distribution" width="100%"/>
-                <p> Sampled <b>MV-MATH</b> examples from each question type. Each sample contains a multi-visual contexts.</p>
-              </div>
-            </div>
-            <div class="box m-5">
-              <div class="content has-text-centered">
-                <img src="static/images/MV-MATH_Comparison.jpg" alt="comparison" width="100%"/>
-                <p>Comparison with existing multimodal math benchmarks. MC: Multiple Choice, FF: Free-form, MS:Multi-Step
-                  <br>
-                </p>
-              </div>
-            </div>
-          </div>
-          <br><br>
-          You can download the dataset on <a href="https://huggingface.co/datasets/PeijieWang/MV-MATH" target="_blank">Hugging Face Dataset</a>.
-          <br><br>
-          <div class="columns is-centered">
-            <div class="column" style="margin-right: -5rem;">
-              <div class="content has-text-centered">
-                <img src="static/images/MV-MATH_stastics.jpg" alt="data-overview" style="max-width: 70%;"/>
-                <p> 
-                  Key statistics of <B>MV-MATH</B>.
-                </p> 
-              </div>
-            </div>
-            <div class="column">
-              <div class="content has-text-centered">
-                <img src="static/images/MV-MATH_data-composition.jpg" alt="data-composition" style="max-width: 100%;"/>
-                <p>
-                    <b>Inner</b>: divided by question type (3 types).<br/>
-                    <b>Middle</b>: divided by difficulty level (3 levels).<br/>
-                    <b>Outer</b>: divided by subjects (11 subjects).
-                </p>
-              </div>
-            </div>
-          </div>
-          
-
-          <div class="columns is-centered">
-            <div class="column">
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/3images.jpg" alt="data-overview" style="max-width: 100%;"/>
-                  <p> 
-                   (a) <strong>comparison with existing mathematical benchmarks</strong>, (b) <strong>distribution of question length per question</strong>, (c) <strong>distribution of the images per question</strong>.
-                  </p> 
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- <div class="content has-text-centered">
-            <img src="static/images/source_dataset.png" alt="geometric reasoning" width="60%"/>
-            <p> Summary of the 31 different source datasets in <img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-              <span class="mathvista">MathVista</span>.
-            </p>
-          </div>
+        <div id="results-carousel" class="carousel results-carousel">
           <div class="content has-text-centered">
-            <img src="static/images/our_new_3_datasets.png" alt="geometric reasoning" width="70%"/>
-            <p> Examples of our newly annotated datasets: IQTest, FunctionQA, and PaperQA.</p>
-          </div> -->
+            <img src="static/images/method.png" alt="distribution" width="100%"/>
+            <p> Figure 2: Overview of the SwS framework that targets at mitigating the model's reasoning weaknesses within the RLVR paradigm.</p>
+            <br>
+          </div>
+        </div>
+          
+        <div class="content has-text-justified">
+          <p>
+            Below is the detailed strategy of how we define the problems with low learning efficiency as weaknesses. Specifically, a problem is classified as a weakness if it meets two criteria: (1) the model never achieves a response accuracy of 50% at any training epoch, and (2) the accuracy trend declines over time, as indicated by a negative slope.
+          </p>
+        </div>
 
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="content has-text-centered">
+            <img src="static/images/weakness_identification.png" alt="distribution" style="width: 100%; max-width: 100%;"/>
+            <p> Figure 3: Illustration of the self-aware <b>weakness identification</b> during a preliminary RL training</p>
+            <br>
+          </div>
+        </div>
 
         </div>
       </div>
@@ -362,13 +316,13 @@
           <div id="results-carousel" class="carousel results-carousel">  
             
               <div class="content has-text-centered">
-                <img src="static/images/MV-MATH_mainresult1.png" style="width: 85%;"/>
+                <img src="static/images/main_results.png" style="width: 85%;"/>
                 <p style="text-align: center; margin-left: auto; margin-right: auto; width: 75%;">
-                  Comparison of model performances across various mathematical subjects. AG: Analytic Geometry, MG: Metric Geometry, TG:
-                  Transformation Geometry, SG: Solid Geometry, CG: Combinatorial Geometry, DG: Descriptive Geometry. The first and second highest
-                  accuracy of LMMs are marked in <span style="color: #df0f20da;">red</span> and <span style="color: #099ee2;">blue</span>, respectively.
+                  Table 1: We report the detailed performance of our SwS implementation across various base models and multiple benchmarks. AIME is evaluated using two metrics: Avg@1 (single-run performance) and Avg@32 (average over 32 runs). <span style="color: #df0f20da;">red</span> and <span style="color: #099ee2;">blue</span>, respectively.
                 </p>
               </div>
+
+        <h2 class="title is-3">Main Results</h2>
             
               <div class="content has-text-centered">
                 <img src="static/images/MV-MATH_mainresult2.png" style="width: 85%;"/>
