@@ -53,50 +53,6 @@
 </head>
 <body>
 
-<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://arxiv.org/pdf/2402.10104v2">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a> 
-      @PAN TODO: consider adding links? -->
-      <!-- <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://mathvista.github.io/">
-            <b>MathVista🔥</b>
-          </a>
-          <a class="navbar-item" href="https://mathllm.github.io/mathvision/">
-            <b>Math-Vision🔥</b>
-          </a>
-          <a class="navbar-item" href="https://eternal8080.github.io/GeoEval.github.io/">
-            <b>GeoEval🔥</b>
-          </a>
-          <a class="navbar-item" href="https://arxiv.org/abs/2407.12023">
-            <b>CMMaTH🔥🔥</b>
-          </a>
-          <a class="navbar-item" href="https://arxiv.org/abs/2502.17419">
-            <b>Survey🔥🔥🔥</b>
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</nav> -->
-
-
 
 <section class="hero">
   <div class="hero-body">
@@ -190,7 +146,7 @@
                       <i class="far fa-images"></i>
                   </span>
                   <span>dataset</span>
-                  </a>
+                </a>
               </span>
               
             </div>
@@ -239,35 +195,22 @@
 <!-- DATASET SECTION -->
 <section class="hero is-light is-small">
   <div class="hero-body has-text-centered">
-    <!-- <h1 class="title is-1 mathvista"><img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>MathVista Dataset</h1> -->
   <h1 class="title is-1 mathvista">
-    <!--<img src="static/images/mathvista.png" style="width:1em;vertical-align: middle" alt="Logo"/>-->
     <span class="mathvista" style="vertical-align: middle">Methodology</span>
   </h1>
   </div>
 </section>
 
-<!-- <section class="section">
-  <div class="container" style="margin-bottom: 2vh;">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Introduction</h2>
-        <div class="content has-text-justified">
-          <p> -->
             
 <section class="section">
   <div class="container">
     <div class="columns is-centered has-text-centered">
-      <!-- <div class="column is-full-width has-text-centered"> -->
         <div class="column is-four-fifths">
-        <!-- <h2 class="title is-3">Overview</h2> -->
-        <div class="content has-text-justified">
-          <p>
-            <b>SwS</b> is a targeted problem synthesis framework designed to strengthen a model's weakest reasoning capabilities via RL training. The framework begins with preliminary RL training on an initial problem set, identifying problems where the model fails to learn efficiently as weaknesses in reasoning. SwS then groups these recorded questions by category, extracts their underlying concepts, and recombines these concepts to synthesize new problems with appropriate difficulty levels. Finally, the model is further trained on the augmented problem set including the weakness-driven synthetic questions, aiming at addressing its weaknesses without relying on external knowledge distillation.
-            <!-- Below is the detailed strategy of how we define the problems with low learning efficiency as weaknesses. Specifically, a problem is classified as a weakness if it meets two criteria: (1) the model never achieves a response accuracy of 50% at any training epoch, and (2) the accuracy trend declines over time, as indicated by a negative slope.
-            <br><br> -->
-          </p>
-        </div>
+          <div class="content has-text-justified">
+            <p>
+              <b>SwS</b> is a targeted problem synthesis framework designed to strengthen a model's weakest reasoning capabilities via RL training. The framework begins with preliminary RL training on an initial problem set, identifying problems where the model fails to learn efficiently as weaknesses in reasoning. SwS then groups these recorded questions by category, extracts their underlying concepts, and recombines these concepts to synthesize new problems with appropriate difficulty levels. Finally, the model is further trained on the augmented problem set including the weakness-driven synthetic questions, aiming at addressing its weaknesses without relying on external knowledge distillation.
+            </p>
+          </div>
 
         <div id="results-carousel" class="carousel results-carousel">
           <div class="content has-text-centered">
@@ -279,7 +222,7 @@
           
         <div class="content has-text-justified">
           <p>
-            Below is the detailed strategy of how we define the problems with low learning efficiency as weaknesses. Specifically, a problem is classified as a weakness if it meets two criteria: (1) the model never achieves a response accuracy of 50% at any training epoch, and (2) the accuracy trend declines over time, as indicated by a negative slope.
+            <b>Weakness Identification</b>: Below is the detailed strategy of how we define the problems with low learning efficiency as weaknesses. Specifically, a problem is classified as a weakness if it meets two criteria: (1) the model never achieves a response accuracy of 50% at any training epoch, and (2) the accuracy trend declines over time, as indicated by a negative slope.
           </p>
         </div>
 
@@ -295,10 +238,6 @@
       </div>
     </div>
 
-
-
-
-
 <!-- RESULTS SECTION -->
 <section class="hero is-light is-small">
   <div class="hero-body has-text-centered">
@@ -308,173 +247,191 @@
 
 <section class="section">
   <div class="container">
-
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths" style="width: 100%;">
         <h2 class="title is-3">Main Results</h2>
         <div class="content has-text-justified">
           <div id="results-carousel" class="carousel results-carousel">  
-            
-              <div class="content has-text-centered">
-                <img src="static/images/main_results.png" style="width: 85%;"/>
-                <p style="text-align: center; margin-left: auto; margin-right: auto; width: 75%;">
-                  Table 1: We report the detailed performance of our SwS implementation across various base models and multiple benchmarks. AIME is evaluated using two metrics: Avg@1 (single-run performance) and Avg@32 (average over 32 runs). <span style="color: #df0f20da;">red</span> and <span style="color: #099ee2;">blue</span>, respectively.
-                </p>
-              </div>
-
-        <h2 class="title is-3">Main Results</h2>
-            
-              <div class="content has-text-centered">
-                <img src="static/images/MV-MATH_mainresult2.png" style="width: 85%;"/>
-                <p style="text-align: center; margin-left: auto; margin-right: auto; width: 75%;">
-                  Comparison of model performances across various mathematical subjects on the <b>choice problem set</b>. The first and second highest
-                  accuracy of LMMs are marked in <span style="color: #df0f20da;">red</span> and <span style="color: #099ee2;">blue</span>, respectively.
-                </p>
-              </div>
-
-              <div class="content has-text-centered">
-                <img src="static/images/MV-MATH_mainresult3.png" style="width: 75%;"/>
-                <p style="text-align: center; margin-left: auto; margin-right: auto; width: 75%;">
-                  Comparison of model performances across various mathematical subjects on the <b>single-step problem set</b>. The first and second highest
-                  accuracy of LMMs are marked in <span style="color: #df0f20da;">red</span> and <span style="color: #099ee2;">blue</span>, respectively.
-                </p>
-              </div>
-
-              <div class="content has-text-centered">
-                <img src="static/images/MV-MATH_mainresult4.png" style="width: 75%;"/>
-                <p style="text-align: center; margin-left: auto; margin-right: auto; width: 75%;">
-                  Comparison of model performances across various mathematical subjects on the <b>multi-step problem set(SAR: Step Accuracy Rate)</b>. The first and second highest
-                  accuracy of LMMs are marked in <span style="color: #df0f20da;">red</span> and <span style="color: #099ee2;">blue</span>, respectively.
-                </p>
-              </div>
-
-              <div class="content has-text-centered">
-                <img src="static/images/MV-MATH_mainresult5.png" style="width: 75%;"/>
-                <p style="text-align: center; margin-left: auto; margin-right: auto; width: 75%;">
-                  Comparison of model performances across various mathematical subjects on the <b>multi-step problem set(QCR: Question Completeness Rate)</b>. The first and second highest
-                  accuracy of LMMs are marked in <span style="color: #df0f20da;">red</span> and <span style="color: #099ee2;">blue</span>, respectively.
-                </p>
-              </div>
-    
-          </div>
-    
-          
-        </div>
-      </div> 
-    </div>
-
-
-
-    <div class="columns is-centered m-6">
-      <div class="column is-full has-text-centered content">
-        <h2 class="title is-3">More Results</h2>
-          <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/MV-MATH_moreresult.png" alt="grade-lv" width="100%"/>
+              <img src="static/images/main_results.png" style="width: 85%;"/>
+              <p style="text-align: center; margin-left: auto; margin-right: auto; width: 80%;">
+                Table 1: We report the detailed performance of our SwS implementation across various base models and multiple benchmarks. AIME is evaluated using two metrics: Avg@1 (single-run performance) and Avg@32 (average over 32 runs). <span style="color: #df0f20da;">red</span> and <span style="color: #099ee2;">blue</span>, respectively.
+              </p>
             </div>
           </div>
+        </div>
+        <br>
+        <h2 class="title is-3 has-text-centered">Weakness Mitigation</h2>
+
+        <div style="width:85%;margin:0 auto;">
+          <div class="content has-text-justified">
+            <p>
+              <b>The effectiveness of weakness mitigation</b>: We find that training the model on the augmented set enables it to solve a higher proportion of initially consistent failure cases across most domains compared to training on the original questions alone. The greatest gains are observed in its weakest areas: Intermediate Algebra (20%), Geometry (5%), and Precalculus (5%).
+              <br><br>
+            </p>
+          </div>
+        </div>
+
+        <div class="content has-text-justified">
+          <div id="results-carousel" class="carousel results-carousel">  
+            <div class="content has-text-centered">
+              <img src="static/images/weakness_mitigation.png" style="width: 85%;"/>
+              <p style="text-align: center; margin-left: auto; margin-right: auto; width: 80%;">
+                Figure 4: The ratios of consistently failed problems from different categories in the MATH-12k training set under different training configurations. (Base model: <a href="https://huggingface.co/Qwen/Qwen2.5-7B">Qwen2.5-7B</a>).
+              </p>
+            </div>
+          </div>
+        </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body has-text-centered">
+    <h1 class="title is-1 mathvista">
+      <span class="mathvista" style="vertical-align: middle">Extensions for SwS</span>
+    </h1>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+
+    <!-- 1. Weak-to-Strong Generalization -->
+    
+    <div class="content" style="width:85%;margin:0 auto;">
+      <h2 class="title is-3 has-text-left" style="margin-bottom:1em;">1. Weak-to-Strong Generalization</h2>
+      <p>
+        When training the top-performing reasoning model, no stronger model exists to produce reference answers for problems identified as its weaknesses. To explore the potential of applying our SwS pipeline to enhancing state-of-the-art models, we extend it to the Weak-to-Strong Generalization setting by using a generally weaker teacher that may outperform the stronger model in specific domains to label reference answers for the synthetic problems.
+      </p>
+    </div>
+    <div class="content" style="width:85%;margin:0 auto; margin-top:1em;">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="has-text-centered">
+          <img src="static/images/W2S_table1.png" style="width: 100%;"/>
+          <p class="caption" style="text-align:center;margin-top:0.5em;">
+            Table 2: Performance on two benchmarks and category-specific results on MATH-500 of the weak teacher model and the strong student model.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="content" style="width:85%;margin:0 auto; margin-top:1em;">
+      <p>
+        <b>One concern may be the presence of incorrect answers from the weaker teacher.</b> However, our self-consistency mechanism, which combines answer generation and difficulty filtering prior to the second stage of RL training, effectively eliminates most erroneous answers. The accuracy of teacher-labeled answers on the MATH-500 test set is shown in the figure below.
+      </p>
+    </div>
+    <div class="content" style="width:85%;margin:0 auto; margin-top:1em;">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="has-text-centered">
+          <img src="static/images/W2S_table2.png" style="width: 100%"/>
+          <p class="caption" style="text-align:center;margin-top:0.5em;">
+            Table 3: The performance of the weak teacher model for answer generation on the MATH-500 test set under different strategies and their corresponding revisions. "Stu-Con" refers to filtering out problems where the student model's accuracy falls below the threshold of 25%.
+          </p>
+        </div>
       </div>
     </div>
 
+    <!-- 2. Self-evolving Targeted Problem Synthesis -->
+    <div class="content" style="width:85%;margin:0 auto;">
+      <h2 class="title is-3 has-text-left" style="margin-top:2em; margin-bottom:1em;">2. Self-evolving Targeted Problem Synthesis</h2>
+      <p>
+        We also explore the potential of utilizing the Self-evolving paradigm to address model weaknesses by executing the full SwS pipeline using the policy itself. This strategy leverages self-consistency to guide itself to generate effective trajectories toward accurate answers, while also integrating general instruction-following capabilities from question generation and quality filtering to enhance reasoning.
+      </p>
+    </div>
+    <div class="content" style="width:85%;margin:0 auto; margin-top:1em;">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="has-text-centered">
+          <img src="static/images/self-evolving-results.png" style="width: 100%;"/>
+          <p class="caption" style="text-align:center;margin-top:0.5em;">
+            Table 4: Experimental results of extending the SwS framework to the Self-evolving paradigm on the <a href="https://huggingface.co/Qwen/Qwen2.5-14B-Instruct">Qwen2.5-14B-Instruct</a> model.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Weakness-driven Selection -->
+    <div class="content" style="width:85%;margin:0 auto;">
+      <h2 class="title is-3 has-text-left" style="margin-top:2em; margin-bottom:1em;">3. Weakness-driven Selection</h2>
+      <p>
+        We propose an alternative extension that augments the training set using identified weaknesses from a larger mathematical reasoning dataset. The detailed Weakness-driven Selection extension of SwS is presented in the following algorithm.
+      </p>
+    </div>
+    <div class="content" style="width:85%;margin:0 auto; margin-top:1em;">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="has-text-centered">
+          <img src="static/images/wds-algorithm.png" style="width: 100%;"/>
+        </div>
+      </div>
+    </div>
+    <div class="content" style="width:85%;margin:0 auto; margin-top:1em;">
+      <p>
+        The model trained with weakness-driven augmentation outperforms random augmentation in terms of accuracy on both the whole evaluated benchmarks and the competition-level subset. In (c), the model quickly fits the randomly selected problems in training, while the problems selected based on weaknesses remain more challenging, provide richer learning signals and promote continued development of reasoning skills.
+      </p>
+    </div>
+    <div class="content" style="width:85%;margin:0 auto; margin-top:1em;">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="has-text-centered">
+          <img src="static/images/wd-selection.png" style="width: 100%; "/>
+          <p class="caption" style="text-align:center;margin-top:0.5em;">
+            Figure 5: Comparison of accuracy improvements using (a) Pass@1 on full benchmarks evaluated in Table 1 and (b) Avg@32 on the competition-level benchmarks. (c) illustrates the proportion of problems within a batch that achieved 100% correctness during training.
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-  
-<!-- Data Examples -->
+
 <section class="hero is-light is-small">
   <div class="hero-body has-text-centered">
-    <h1 class="title is-1 mathvista_other">Data Examples</h1>
+    <h1 class="title is-1 mathvista">
+      <span class="mathvista" style="vertical-align: middle">Visualization</span>
+    </h1>
   </div>
 </section>
+
+
 
 <section class="section">
   <div class="container">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths" style="width: 100%;">
-        <h2 class="title is-3">Data Examples</h2>
+        <div style="width:85%;margin:0 auto;">
+          <div class="content has-text-justified">
+            <p>
+              The following visualization presents an illustration of a geometry failure case from the MATH-12k training set, accompanied by extracted concepts and our weakness-driven synthetic questions of varying difficulty levels, all closely aligned with the original question. 
+            <br><br>
+            </p>
+          </div>
+        </div>
         <div class="content has-text-justified">
           <div id="results-carousel" class="carousel results-carousel">  
-            
-              <div class="content has-text-centered">
-
-                <img src="static/images/MV-MATH_example1.png" style="width: 65%;"/>
-                <p style="margin-bottom: 30px;">Data Example of Multiple-choice questions.</p>
-
-                
-              </div>
-            
-              <div class="content has-text-centered">
-
-                <img src="static/images/MV-MATH_example2.png" style="width: 45%;"/>
-                <p style="margin-bottom: 30px;">Data Example of Multiple-choice questions.</p>
-              </div>
-
-              <div class="content has-text-centered">
-
-                <img src="static/images/MV-MATH_example3.png" style="width: 45%;"/>
-                <p style="margin-bottom: 30px;">Data Example of Multiple-choice questions.</p>
-              </div>
-
-              <div class="content has-text-centered">
-
-                <img src="static/images/MV-MATH_example4.png" style="width: 45%;"/>
-                <p style="margin-bottom: 30px;">Data Example of Free-form questions.</p>
-              </div>
-
-              <div class="content has-text-centered">
-
-                <img src="static/images/MV-MATH_example5.png" style="width: 45%;"/>
-                <p style="margin-bottom: 30px;">Data Example of Free-form questions.</p>
-              </div>
-
-              <div class="content has-text-centered">
-
-                <img src="static/images/MV-MATH_example6.png" style="width: 45%;"/>
-                <p style="margin-bottom: 30px;">Data Example of Multiple-choice questions.</p>
-              </div>
-
-              <div class="content has-text-centered">
-
-                <img src="static/images/MV-MATH_example7.png" style="width: 45%;"/>
-                <p style="margin-bottom: 30px;">Data Example of Multi-step questions.</p>
-              
-              </div>
-
-              <div class="content has-text-centered">
-
-                <img src="static/images/MV-MATH_example8.png" style="width: 45%;"/>
-                <p style="margin-bottom: 30px;">Data Example of Free-form questions.</p>
-              
-              </div>
-
-              <div class="content has-text-centered">
-
-                <img src="static/images/MV-MATH_example9.png" style="width: 45%;"/>
-                <p style="margin-bottom: 30px;">Data Example of Free-form questions.</p>
-              
-              </div>
-
-              <div class="content has-text-centered">
-
-                <img src="static/images/MV-MATH_example10.png" style="width: 45%;"/>
-                <p style="margin-bottom: 30px;">Data Example of Multiple-choice questions.</p>
-              
-              </div>
-
+            <div class="content has-text-centered">
+              <img src="static/images/visualization.png" style="width: 85%;"/>
+              <p style="text-align: center; margin-left: auto; margin-right: auto; width: 80%;">
+                 Figure 6: Illustration of a geometry problem from the MATH-12k failed set, with extracted concepts and conceptually linked synthetic problems across different difficulty levels.
+              <br>
+              </p>
+            </div>
           </div>
-
-          
         </div>
-      </div> 
-    </div>
-  </div>
 </section>
 
+
+
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body has-text-centered">
+    <h1 class="title is-1 mathvista">
+      <span class="mathvista" style="vertical-align: middle">Cite Us</span>
+    </h1>
+  </div>
+</section>
+  
 
 <!-- @PAN TODO: bibtex -->
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
-    <h2 class="title is-3 has-text-centered">BibTeX</h2>
     <pre><code>@misc{liang2025swsselfawareweaknessdrivenproblem,
       title={SwS: Self-aware Weakness-driven Problem Synthesis in Reinforcement Learning for LLM Reasoning}, 
       author={Xiao Liang and Zhong-Zhi Li and Yeyun Gong and Yang Wang and Hengyuan Zhang and Yelong Shen and Ying Nian Wu and Weizhu Chen},
